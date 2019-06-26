@@ -1,0 +1,811 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Remark</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #f7f8f2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      .right-float {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+#Енергия
+[energy]
+
+.footnote[В Интернет http://ruevs.com/energy/]
+---
+layout: false
+class: center, inverse
+## Карате със 120 по магистралата за Пловдив между 2 и 3 след обед.
+## Колко ще изминете?
+--
+
+$$120(3-2)=120{\cdot}1=120$$
+--
+
+## Какъв е проблемът с тази сметка?
+--
+
+### 120 какво изминахте?
+--
+
+## А какъв е проблемът с въпроса?
+--
+
+### Колко какво ще изминете?
+---
+layout: false
+.left-column[
+  ## Мерни единици
+]
+.right-column[
+Карате със `\(120mm/s\)` по магистралата за Пловдив между `\(2s\)` и `\(3s\)` след обед. Какво разстояние ще изминете?
+
+$$120{mm \over s}(3s-2s)=120{mm \over s}1s=120mm$$
+
+.footnote[.right-float[<img src="./media/Dont_panic.svg" alt="HHGTTG" width="100">]
+.red[*] Да, в тази лекция ще има много формули <br>
+##😱😠😡😢😲😵😰<br>
+.right-float[<img src="./media/FuturamaDoNotPanic.png" alt="HHGTTG" width="100">]
+#.red[DON'T PANIC]]
+]
+--
+
+.right-column[
+$${mm \over s}(s-s)={mm \over s}s=mm$$
+]
+---
+.left-column[
+  ## Мерни единици
+  ## SI
+]
+.right-column[
+  # [SI](https://en.wikipedia.org/wiki/International_System_of_Units)
+  ### Международна система единици
+  ### От френски "Système international (d'unités)"
+  ## Основни единици
+
+| Име      | Означение | Символ | Мярка за |
+|:---------|:---------:|:------:|:---------|
+| секунда  | s         | T      | Време|
+| метър    | m         | L      | Дължина  |
+| килограм | kg        | M      | Маса |
+| ампер    | A         | I      | Електрически ток |
+| келвин   | K         | `\(\theta\)` Θ | Термодинамична температура |
+| мол      | mol       | N      | Количество вещество |
+| кандела  | cd        | J      | Интензитет на светлината |
+]
+
+.footnote[.red[*] http://old.iupac.org/publications/books/author/mills.html <br> Quantities Units and Symbols in Physical Chemistry, IUPAC]
+???
+## Защо да я ползваме?
+
+60 W tungsten-filament incandescent light bulb has a luminous intensity of about 64 candela.
+
+the absolute temperature in kelvins is the temperature in degrees Celsius plus about 273.15; human body temperature is about 37 °C or 310 K.
+human body temperature is about 37 °C or 310 K.
+
+A 60 W incandescent light bulb consumes 0.5 amperes at 120 V (US mains voltage) and about 0.25 amperes at 240 V (European mains voltage).
+
+The first letter of symbols for units derived from the name of a person is written in upper case; otherwise, they are written in lower case.
+---
+.left-column[
+  ## Мерни единици
+  ## SI
+  ## Секунда
+]
+.right-column[
+## Време (секунда, s)
+.right-float[[<img src="./media/Czech-2013-Prague-Astronomical_clock_face.jpg" alt="Night Sky" width="140">](./media/Czech-2013-Prague-Astronomical_clock_face.jpg)]
+- __Стара__: 
+
+`\(^1/_{86400}\)` от ден от 24 часа по 60 минути по 60 секунди
+
+.right-float[[<img src="./media/Iridescent_Nightscape_over_La_Silla.jpg" alt="Night Sky" width="140">](./media/Iridescent_Nightscape_over_La_Silla.jpg)]
+- __Временна (1956)__:
+
+`\(1 \over 31556925.9747\)` от продължителността на тропическата 1990-а година януари 0 в 12 часа [ефемеридно време](https://en.wikipedia.org/wiki/Ephemeris_time).
+
+.right-float[[<img src="./media/Ytterbium_Lattice_Atomic_Clock_(10444764266).jpg" alt="Night Sky" width="140">](./media/Ytterbium_Lattice_Atomic_Clock_%2810444764266%29.jpg)]
+- __Текуща (1967)__:
+
+Продължителносста на `\(9192631770\)` периода на електромагнитната радияция съответваща на прехода между двате нива на
+[свръхфината структура на основното състояние](https://en.wikipedia.org/wiki/Hyperfine_structure#Use_in_defining_the_SI_second_and_meter) на атомът на [цезий-133](https://en.wikipedia.org/wiki/Atomic_clock).
+
+.footnote[.red[*] https://en.wikipedia.org/wiki/Ephemeris_time]
+]
+???
+the use of base 60 dates back to Babylonian times (12)
+
+https://commons.wikimedia.org/wiki/File:Czech-2013-Prague-Astronomical_clock_face.jpg
+
+https://commons.wikimedia.org/wiki/File:Iridescent_Nightscape_over_La_Silla.jpg
+
+https://commons.wikimedia.org/wiki/File:Clock_accuracy.svg
+
+https://commons.wikimedia.org/wiki/File:Ytterbium_Lattice_Atomic_Clock_(10444764266).jpg
+---
+.left-column[
+  ## Мерни единици
+  ## SI
+  ## Секунда
+  ## Метър
+]
+.right-column[
+## Дължина (метър, m)
+
+.right-float[[<img src="./media/louvre-courtyard.jpg" alt="Paris meridian" width="150">](https://www.youtube.com/embed/YsFGe6Afx5M)]
+- __Стара: (1793)__:
+
+`\(1/10000000\)` от дължината на парижкият меридиан между северният полюс и екваторът.
+
+.right-float[<img src="./media/nist-library-us-prototype-meter-bar-color_hr_1.jpg" alt="Meter" width="150">]
+- __Временна (1889)__:
+
+Дължината на прототипът на метърът приет от [<abbr title="Comité international des poids et mesures">CIPM</abbr>](https://en.wikipedia.org/wiki/International_Committee_for_Weights_and_Measures) при температурата на топене на ледът.
+
+- __Временна (1960)__:
+
+`\(1650763.73\)` дължини на вълната във вакуум на фотона съответстващ на прехода между атомни орбитали `\(2p^{10}\)` и `\(2d^5\)` на [криптон-86](https://en.wikipedia.org/wiki/Isotopes_of_krypton#Krypton-86).
+
+- __Текуща (1983)__:
+
+Разстоянието изминато от светлина във вакуум за `\({1 \over 299792458}s\)`.
+
+.footnote[.red[*] https://en.wikipedia.org/wiki/History_of_the_metre]
+]
+???
+The length of the equator is close to 40,000,000 metres (more precisely 40,075,0142 metres)
+
+https://www.youtube.com/watch?v=YsFGe6Afx5M
+
+https://www.youtube.com/embed/YsFGe6Afx5M
+
+https://upload.wikimedia.org/wikipedia/commons/6/69/Arago_medallion_Paris.jpg
+
+https://parisondemand.wordpress.com/2012/02/01/the-arago-line-a-mystic-stroll-along-the-parisian-meridian/
+
+https://parisondemand.files.wordpress.com/2011/12/louvre-courtyard.jpg
+
+https://en.wikipedia.org/wiki/File:US_National_Length_Meter.JPG
+
+https://www.bipm.org/en/committees/cipm/
+---
+.left-column[
+  ## Мерни единици
+  ## SI
+  ## Секунда
+  ## Метър
+  ## Килограм
+]
+.right-column[
+.right-float[[<img src="./media/kg-history-woodcut-2_1.png" alt="SI Woodcut" width="250">](https://www.nist.gov/si-redefinition/kilogram-past)]
+## Маса (килограм, kg)
+
+- __Стара: (1793)__:
+
+[Грав](https://en.wikipedia.org/wiki/Grave_%28unit%29) е дефиниран като масата (тогава наричана _тежест_) на един литър вода в точката на замръзване.<sup>FG</sup>
+
+.right-float[[<img src="./media/u.s.-kilogram-masses.jpg" alt="US Kilogram" width="300">](./media/u.s.-kilogram-masses.jpg)]
+- __Временна (1889)__:
+
+Масата на малък цилиндър `\(\approx47cm^3\)` от 90% платина и 10% иридий, който се пази в "Pavillon de Breteuil" Франция ([и много официални копия](https://www.nist.gov/si-redefinition/kilogram-present)).
+]
+???
+Грав-сила (англ. grave-force) — устаревшая французская гравитационная дометрическая единица силы, название которой происходило от слова «гравитация». Она равна силе, с которым тело массой 1 грав давит на опору в стандартном гравитационном поле. Грав — металлический стандарт массы в 1000 г, который использовался во Франции до введения в 1799 г. стандарта килограмма. Поэтому 1 грав-сила равен 1 килограмму-силе и по определению равен 9,80665 ньютона. Тогда же название единицы изменили на килограмм, так как слово «грав» напоминало немецкое «граф» и было признано неполиткорректным в обществе всеобщего равенства.
+
+Despite the prefix "kilo-", the kilogram is the coherent base unit of mass, and is used in the definitions of derived units. Nonetheless, prefixes for the unit of mass are determined as if the gram were the base unit.
+
+Though this is the location of the BIPM in Saint-Cloud, https://www.nist.gov/si-redefinition/kilogram-introduction indicates that [...] the IPK, which is kept by the [BIPM] in Sèvres, France. (This borders onto, but is distinct from Saint-Cloud.)
+
+This object is the International Prototype Kilogram or IPK called rather poetically ''Le Grand K''.
+
+[Redefining the Kilogram, The Past](https://www.nist.gov/si-redefinition/kilogram-past)
+
+https://www.nist.gov/physical-measurement-laboratory/past
+
+https://www.nist.gov/si-redefinition/kilogram-silicon-spheres-and-international-avogadro-project
+
+https://www.nist.gov/sites/default/files/images/2018/05/14/kg-history-woodcut-2_1.png
+
+https://www.nist.gov/image/sidiagramcolor-12001png
+
+https://www.nist.gov/image/us-kilogram-massesjpg
+---
+.left-column[
+  ## Мерни единици
+  ## SI
+  ## Секунда
+  ## Метър
+  ## Килограм
+  ## Килограм <br> от миналият месец
+]
+.right-column[
+.right-float[[<img src="./media/wattbalance_rsi_cover-1.jpg" alt="The NIST-4 Kibble balance" width="200">](./media/wattbalance_rsi_cover-1.jpg)]
+## Маса (килограм, kg)
+
+- __Текуща (2019)__:
+
+От [20-ти май 2019 година](https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units) (144-тата годишнина от
+[конвенцията за метъра от 1875](https://en.wikipedia.org/wiki/Metre_Convention))
+килограмът е дефиниран използвайки текущите дефиниции на метърът и секундата, като [константата на Планк](https://en.wikipedia.org/wiki/Planck_constant) е фиксирана на:
+$$h = 6.626\ 070\ 15\times 10^{-34}\ \text{J}{\cdot}\text{s}$$
+където
+$$J={{kg{\cdot}m^2} \over {s^2}}$$
+
+При тази дефиниция килограмът е:
+$$kg={{h} \over {6.62607015\times10^{-34}{\cdot}m^2{\cdot}s^{−1}}}$$
+
+.footnote[.red[*] https://www.nist.gov/si-redefinition/kilogram-mass-and-plancks-constant]
+]
+???
+The NIST-4 Kibble balance
+$$\hbar = \frac{h}{2 \pi}$$
+$$\hbar={{h}\over{2\pi}}$$
+$$\hbar={{h}\over{2\pi}} = 1.054\ 571\ 800(13)\times 10^{-34}\ \text{J}{\cdot}\text{s}/\text{rad} = 6.582\ 119\ 514(40)\times 10^{-16}\ \text{eV}{\cdot}\text{s}/\text{rad}$$
+
+https://www.nist.gov/si-redefinition/kilogram-kibble-balance
+
+https://en.wikipedia.org/wiki/Planck_energy
+
+https://en.wikipedia.org/wiki/Planck_time
+
+https://en.wikipedia.org/wiki/Planck_length
+---
+
+.right-float[[<img src="./media/Royal_Promenade,_Explorer_of_the_Seas_01.jpg" alt="Mall" width="400"> <br> Royal Promenade, Explorer of the Seas](https://commons.wikimedia.org/wiki/File:Royal_Promenade,_Explorer_of_the_Seas_01.jpg)]
+--
+
+# WTF?!
+--
+
+### What is this?!??!?!
+--
+
+# Мол!
+--
+
+# Мол на кораб!
+???
+https://commons.wikimedia.org/wiki/File:1000s_of_Shopping.JPG
+
+https://commons.wikimedia.org/wiki/File:Budapest,_WestEnd_City_Center,_2.jpg
+
+https://commons.wikimedia.org/wiki/File:Glattzentrum_-_Innenansicht_2012-01-30_16-49-07_(GT-I9100)_ShiftN.jpg
+
+https://commons.wikimedia.org/wiki/File:Glattzentrum_-_Innenansicht_2012-02-01_16-03-48_(TZ20).JPG
+
+https://commons.wikimedia.org/wiki/File:SZ_KK_Mall_Shenzhen_interior_April_2016_DSC_(6).JPG
+
+https://commons.wikimedia.org/wiki/File:Royal_Promenade,_Explorer_of_the_Seas_01.jpg
+---
+.left-column[
+  ## Мерни единици
+  ## SI
+  ## Секунда
+  ## Метър
+  ## Килограм
+  ## Мол
+]
+.right-column[
+.right-float[[<img src="./media/Amadeo_Avogadro.png" title="Симпатяга :-)" alt="Avogadro" width="150">](https://en.wikipedia.org/wiki/Avogadro_constant)]
+## Количество вещество <br> (мол, mol)
+
+- __Стара: (1900)__:
+
+Стехиометрично количество вещество равно на масата в грамове на `\(N_A\)` молекули от дадено вещество
+(където `\(N_A\)` е [числото на Авогадро](https://bg.wikipedia.org/wiki/Число_на_Авогадро))
+
+- __Временна (1967)__:
+
+.right-float[[<img src="./media/Silicon_sphere_for_Avogadro_project.jpg" alt="1 kg Silicon Sphere" width="200">](./media/Silicon_sphere_for_Avogadro_project.jpg)]
+Количеството от дадено вещество (съединение), което съдържа толкова градивни частици колкото атома има в 0.012 kg въглерод-12.
+
+- __Текуща (2019)__:
+
+Количество вещество, което съдържа точно `\(6.02214076 \times 10^{23}\)` градивни частици. Числото на Авогадро N<sub>A</sub> е фиксирано на тази стойност mol<sup>−1</sup>.
+
+]
+???
+Avogadro's number is the number of atoms in 12 grams of the carbon isotope carbon-12.
+
+Последната дефиниция подмени атомната маса на въгледрода.
+
+When the mole is used, the elementary entities must be specified and may be atoms, molecules, ions, electrons, other particles, or specified groups of such particles.
+ 
+A mole of a substance has a mass that is its molecular mass expressed in units of grams; the mass of a mole of carbon is 12.0;g, the mass of a mole of table salt is 58.4 g.
+
+https://commons.wikimedia.org/wiki/File:Silicon_sphere_for_Avogadro_project.jpg
+
+https://commons.wikimedia.org/wiki/File:Amadeo_Avogadro.png
+---
+.left-column[
+  ## What is it?
+  ## Why use it?
+]
+.right-column[
+As the slideshow is expressed using Markdown, you may:
+
+- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
+
+As the slideshow is actually an HTML document, you may:
+
+- Display it in any decent browser
+
+- Style it using regular CSS, just like any other HTML content
+
+- Use it offline!
+
+As the slideshow is contained in a plain file, you may:
+
+- Store it wherever you like; on your computer, hosted from your Dropbox, hosted on Github Pages alongside the stuff you're presenting...
+
+- Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
+]
+---
+template: inverse
+
+## How does it work, then?
+---
+name: how
+
+.left-column[
+  ## How does it work?
+### - Markdown
+]
+.right-column[
+A Markdown-formatted chunk of text is transformed into individual slides by JavaScript running in the browser:
+
+```remark
+# Slide 1
+This is slide 1
+
+---
+
+# Slide 2
+This is slide 2
+```
+
+.slides[
+  .first[
+  ### Slide 1
+  This is slide 1
+  ]
+  .second[
+  ### Slide 2
+  This is slide 2
+  ]
+]
+
+Regular Markdown rules apply with only a single exception:
+
+  - A line containing three dashes constitutes a new slide
+  (not a horizontal rule, `&lt;hr /&gt;`)
+
+Have a look at the [Markdown website](http://daringfireball.net/projects/markdown/) if you're not familiar with Markdown formatting.
+]
+---
+.left-column[
+  ## How does it work?
+  ### - Markdown
+  ### - Inside HTML
+]
+.right-column[
+A simple HTML document is needed for hosting the styles, Markdown and the generated slides themselves:
+
+```xml
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      /* Slideshow styles */
+    </style>
+  </head>
+  <body>
+*    <textarea id="source">
+      <!-- Slideshow Markdown -->
+    &lt;/textarea&gt;
+*    <script src="remark.js">
+    </script>
+    <script>
+*      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+```
+
+You may download remark to have your slideshow not depend on any online resources, or reference the [latest version](http://remarkjs.com/downloads/remark-latest.min.js) online directly.
+]
+---
+template: inverse
+
+## Of course, Markdown can only go so far.
+---
+.left-column[
+  ## Markdown extensions
+]
+.right-column[
+To help out with slide layout and formatting, a few Markdown extensions have been included:
+
+- Slide properties, for naming, styling and templating slides
+
+- Content classes, for styling specific content
+
+- Syntax highlighting, supporting a range of languages
+]
+
+---
+.left-column[
+  ## Markdown extensions
+  ### - Slide properties
+]
+.right-column[
+Initial lines containing key-value pairs are extracted as slide properties:
+
+```remark
+name: agenda
+class: middle, center
+
+# Agenda
+
+The name of this slide is {{ name }}.
+```
+
+Slide properties serve multiple purposes:
+
+* Naming and styling slides using properties `name` and `class`
+
+* Using slides as templates using properties `template` and `layout`
+
+* Expansion of `{{ property }}` expressions to property values
+
+See the [complete list](https://github.com/gnab/remark/wiki/Markdown#slide-properties) of slide properties.
+]
+---
+.left-column[
+  ## Markdown extensions
+  ### - Slide properties
+  ### - Content classes
+]
+.right-column[
+Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
+
+```remark
+.footnote[.red.bold[*] Important footnote]
+```
+
+Resulting HTML extract:
+
+```xml
+<span class="footnote">
+  <span class="red bold">*</span> Important footnote
+</span>
+```
+]
+---
+.left-column[
+  ## Markdown extensions
+  ### - Slide properties
+  ### - Content classes
+  ### - Syntax Highlighting
+]
+.right-column[
+Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
+
+Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
+
+.pull-left[
+
+<pre><code>```javascript
+function add(a, b)
+  return a + b
+end
+```</code></pre>
+]
+.pull-right[
+
+<pre><code>```ruby
+def add(a, b)
+  a + b
+end
+```</code></pre>
+]
+
+A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration#highlighting) are available, including several well-known themes from different editors and IDEs.
+
+]
+---
+.left-column[
+  ## Presenter mode
+]
+.right-column[
+To help out with giving presentations, a presenter mode comprising the
+following features is provided:
+
+- Display of slide notes for the current slide, to help you remember
+  key points
+
+- Display of upcoming slide, to let you know what's coming
+
+- Cloning of slideshow for viewing on extended display
+]
+---
+.left-column[
+  ## Presenter mode
+  ### - Inline notes
+]
+.right-column[
+Just like three dashes separate slides,
+three question marks separate slide content from slide notes:
+
+```
+Slide 1 content
+
+*???
+
+Slide 1 notes
+
+---
+
+Slide 2 content
+
+*???
+
+Slide 2 notes
+```
+
+Slide notes are also treated as Markdown, and will be converted in the
+same manner slide content is.
+
+Pressing __P__ will toggle presenter mode.
+]
+???
+Congratulations, you just toggled presenter mode!
+
+Now press __P__ to toggle it back off.
+---
+.left-column[
+  ## Presenter mode
+  ### - Inline notes
+  ### - Cloned view
+]
+.right-column[
+Presenter mode of course makes no sense to the audience.
+
+Creating a cloned view of your slideshow lets you:
+
+- Move the cloned view to the extended display visible to the audience
+
+- Put the original slideshow in presenter mode
+
+- Navigate as usual, and the cloned view will automatically keep up with the original
+
+Pressing __C__ will open a cloned view of the current slideshow in a new
+browser window.
+]
+---
+template: inverse
+
+## It's time to get started!
+---
+.left-column[
+  ## Getting started
+]
+.right-column[
+Getting up and running is done in only a few steps:
+
+1. Visit the [project site](http://github.com/gnab/remark)
+
+2. Follow the steps in the Getting Started section
+
+For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
+]
+---
+name: last-page
+template: inverse
+
+## That's all folks (for now)!
+
+Slideshow created using [remark](http://github.com/gnab/remark).
+---
+class: center, middle
+ 
+# `\(\LaTeX{}\)` in remark
+ 
+---
+# Display and Inline
+# 😱 :scream: 😠 :angry: 😡 :rage: 😢 :cry: 😲 :astonished: 😵 :dizzy_face: 😰 :cold_sweat:
+1. This is an inline integral: `\(\int_a^bf(x)dx\)`
+2. More `\(x={a \over b}\)` formulae.
+3. Kinetic energy `\(E={1 \over 2}mv^2\)`
+---
+# Display formula:
+
+
+$$e^{i\pi} + 1 = 0$$
+$$E_K={1 \over 2}mv^2$$
+
+$$X_k=\frac{1}{N} x_n e^{\mathrm{i} 2\pi k \frac{n}{N}}$$
+
+$$X=\frac{1}{N} \sum_{n=0}^{N-1} x_n e^{\mathrm{i} 2\pi k \frac{n}{N}}$$
+
+$$X_k=\frac{1}{N} \sum_{n=0}^{N-1} x_n e^{\mathrm{i} 2\pi k \frac{n}{N}}$$
+
+???
+Writing math formulas seems really easy (if I knew `\(\LaTeX{}\)`).
+Now I just have to try images and videos and the presentation is "done" :-D
+---
+# Images
+
+.right[![Right-aligned image](https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg)]
+???
+Did we do images? I think we did.
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5d/Castle_Bravo_Blast.jpg)
+
+# Slide with background image
+
+___What is this!??!?!___
+???
+Nice ah!
+https://commons.wikimedia.org/wiki/File:Castle_Bravo_Blast.jpg
+---
+class: middle, center
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7Z4JIQjQM" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+
+### Video example from YouTube
+---
+# Slide 1
+
+1. Point1
+--
+
+2. Point 2
+--
+
+3. Pooint 3
+    </textarea>
+    <script src="engine/remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script>
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="engine/remark.language.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+//          ratio: '16:9',
+          highlightLines: true
+        }) ;
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
