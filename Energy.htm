@@ -5,11 +5,11 @@
     <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
     <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
     <title>Energy</title>
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+<!--      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);-->
+    <style>
+      @import url(./engine/fonts/fonts.css);
       body {
         font-family: 'Droid Serif';
       }
@@ -33,7 +33,7 @@
         text-decoration: none;
       }
       code {
-        background: #f7f8f2;
+//        background: #f7f8f2;
         border-radius: 5px;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
@@ -118,6 +118,10 @@
       }
       .right-float {
         float: right;
+      }
+      .pisa_bg {
+        background: url("./media/Tower_of_Pisa.jpg");
+        background-size: contain
       }
     </style>
   </head>
@@ -219,7 +223,7 @@ The first letter of symbols for units derived from the name of a person is writt
 ]
 .right-column[
 ## Време (секунда, s)
-.right-float[[<img src="./media/Czech-2013-Prague-Astronomical_clock_face.jpg" alt="Night Sky" width="140">](./media/Czech-2013-Prague-Astronomical_clock_face.jpg)]
+.right-float[[<img src="./media/Czech-2013-Prague-Astronomical_clock_face.jpg" alt="Nice clock" width="140">](./media/Czech-2013-Prague-Astronomical_clock_face.jpg)]
 - __Стара__: 
 
 `\(^1/_{86400}\)` от ден от 24 часа по 60 минути по 60 секунди
@@ -229,7 +233,7 @@ The first letter of symbols for units derived from the name of a person is writt
 
 `\(1 \over 31556925.9747\)` от продължителността на тропическата 1990-а година януари 0 в 12 часа [ефемеридно време](https://en.wikipedia.org/wiki/Ephemeris_time).
 
-.right-float[[<img src="./media/Ytterbium_Lattice_Atomic_Clock_(10444764266).jpg" alt="Night Sky" width="140">](./media/Ytterbium_Lattice_Atomic_Clock_%2810444764266%29.jpg)]
+.right-float[[<img src="./media/Ytterbium_Lattice_Atomic_Clock_(10444764266).jpg" alt="Atomic clock" width="140">](./media/Ytterbium_Lattice_Atomic_Clock_%2810444764266%29.jpg)]
 - __Текуща (1967)__:
 
 Продължителносста на `\(9192631770\)` периода на електромагнитната радияция съответваща на прехода между двате нива на
@@ -446,28 +450,248 @@ https://commons.wikimedia.org/wiki/File:Silicon_sphere_for_Avogadro_project.jpg
 
 https://commons.wikimedia.org/wiki/File:Amadeo_Avogadro.png
 ---
+template: inverse
+
+## За какво щях да говоря?
+--
+
+# Енергия!
+---
+background-image: url(./media/IMG_8830.JPG)
+background-size: cover
 .left-column[
-  ## What is it?
-  ## Why use it?
+  ## Защо за енергията?	
 ]
 .right-column[
-As the slideshow is expressed using Markdown, you may:
+### По едно време (2011г.) твърде много се говореше за енергията.
+### На последък пак...
+]
+???
+Напоследък много се говори за енергия.
+-	Протести за ецените на електро енергията
+-	Референдум за атомната енергия
+-	Енергоспестяващи крушки, перални…
+-	Зелена енергия
 
-- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
+И аз реших че твърде много се говори за енергия но трвърде малко се мисли за нея.
+И затова реших и аз още повече да говоря за нея с надеждата някой да се замисли.
 
-As the slideshow is actually an HTML document, you may:
+https://moanashirts.com/wp-content/uploads/2019/06/Retro-Vintage-3-6-Roentgen-Not-Great-Not-Terrible-Chernobyl-shirt-1.jpg
+--
 
-- Display it in any decent browser
+.pull-right[<img src="./media/image_5452e-Chernobyl-Disaster.jpg" alt="Chernobyl reactor 4" title="3.6 Roentgen, not great, not terrible" width="100%">]
+--
 
-- Style it using regular CSS, just like any other HTML content
+.pull-left[<img src="./media/Retro-Vintage-3-6-Roentgen-Not-Great-Not-Terrible-Chernobyl-shirt-1.jpg" alt="Mall" width="100%"> <br> OK meme е но чак тениска?]
+---
+background-image: url(./media/CrabNebula_PIA21474.jpg)
+background-size: cover
+.inverse[
+.left-column[
+  ## Защо за енергията?	
+  ## Какво е енергия?
+  ## &nbsp
+]
+.right-column[
+.right-float[[<img src="./media/EinsteinTongue.jpg" alt="Albert Einstein Tongue" width="200">](https://culturacolectiva.com/history/albert-einstein-tongue-photo-true-story-behind)]
+# You matter unless you multiply yourself by `\(C^2\)` then you energy.
 
-- Use it offline!
+### Това е вярно...
 
-As the slideshow is contained in a plain file, you may:
+# $$E =m{\cdot}C^2$$
 
-- Store it wherever you like; on your computer, hosted from your Dropbox, hosted on Github Pages alongside the stuff you're presenting...
+.footnote[.red[*] [NASA JPL Crab Nebula from Five Observatories](https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474)]
+]
+]
+???
+Всичко около нас е или енергия или марютерия. Друго няма (според физиците).
+Шегичка за духа?
 
-- Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
+Но за тази крилата формула по-късно...
+
+https://i.pinimg.com/originals/da/33/25/da33251ac6e65f04b1a97eefaafde8ad.jpg
+
+March 14, 1951, Einstein was ready to celebrate his 72nd birthday.
+
+https://culturacolectiva.com/history/albert-einstein-tongue-photo-true-story-behind
+
+https://www.nasa.gov/feature/goddard/nasas-sdo-sees-sun-emit-mid-level-flare-oct-1
+https://www.nasa.gov/sites/default/files/thumbnails/image/oct_1_2015_flare.jpg
+
+https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA16114
+https://photojournal.jpl.nasa.gov/jpeg/PIA16114.jpg
+
+https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474
+
+---
+.left-column[
+  ## Защо за енергията?	
+  ## Какво е енергия?
+]
+.right-column[
+## Да видим какво пише в учебника по физика?
+>[...в днешните учебни програми по физика отсъства
+>по-общо определение за величината енергия. В 8. клас се дават определения за
+>кинетична енергия, за потенциална енергия, за механична енергия, за вътрешна
+>енергия, в 9. клас се говори за енергия на полето... по-общо определение за енергия
+>обаче не фигурира никъде. Като резултат в съзнанието на учениците остава създадената
+>още в 6. клас първоначална представа за енергията като мярка за ползата, която можем
+>да получим от едно тяло (или система) чрез работата, която то е в състояние да
+>извърши.](http://phys.uni-sofia.bg/~cpopov/Almanah-pdf/I%20chast/1%20metodika/05%20zashto%20minus.pdf)
+
+Хммм...
+]
+???
+Тръгваш да търсиш из интернет в учебниците по физика дефиниция за енергията - няма свеста.
+Питаш тъщата - учител по физика в гимазията - няма. Проблем...
+
+Енергията (на гръцки: ἐνέργεια — активност, работа) е скаларна физична величина, която характеризира способността на дадена система да променя състоянието на заобикалящата я среда или да извършва работа. Често се среща опростената дефиниция, че енергията на дадена система е способността ѝ да върши работа. Тази опростена дефиниция е удобна в класическата механика. 
+
+енергията на една система е величина, чиято промяна е равна на работата на външните сили върху системата.
+
+закон за запазване на енергията
+
+http://phys.uni-sofia.bg/~cpopov/Almanah-pdf/I%20chast/1%20metodika/05%20zashto%20minus.pdf
+---
+.left-column[
+  ## Защо за енергията?	
+  ## Какво е енергия?
+  ## Видове енергия
+]
+--
+.right-column[
+- Механична енергия
+  - Кинетична енергия
+  - Потенциална енергия
+- Топлинна енергия
+- Електромагнитна енергия
+  - [Електрическа потенциална енергия](https://en.wikipedia.org/wiki/Electric_potential_energy)
+- Ядрена (атомна) енергия
+- Тъмна енергия
+
+## Други?
+]
+--
+.right-column[
+
+- Електроенергия?
+- Зелена енергия?
+- Вятърна енергия?
+- Слънчева енергия?
+- [Чи? 氣](https://en.wikipedia.org/wiki/Qi)
+- <a href="https://www.google.com/search?q=quantum+energy" title="Bullshit!!!">Квантова енергия (quantum energy)?</a>
+- Негативна енергия?
+]
+???
+https://bg.wikipedia.org/wiki/Преобразуватели_на_електрическа_енергия
+
+https://en.wikipedia.org/wiki/Electric_power_conversion
+
+А стига бе статия на българската Wikipedia, която е мноооого по-подробна от английската!
+---
+template: inverse
+
+## Механична енергия
+---
+.left-column[
+  ## Механична енергия
+  ### - Кинетична
+[<img src="./media/Tower_of_Pisa.jpg" alt="1 kg Silicon Sphere" width="100%">](./media/Tower_of_Pisa.jpg)
+]
+.right-column[
+# Кинетична енергия
+
+[Кинетичната енергия](https://en.wikipedia.org/wiki/Kinetic_energy) на тяло с маса `\(m\)` движещо се със скорост `\(v\)` е:
+
+$$E_\mathrm{k} =\tfrac{1}{2} mv^2$$
+
+Например ако тяло с маса 80&nbsp;kg се движи със скорост 18&nbsp;m/s (64.8&nbsp;km/h) то енергияа му е:
+
+$$E_\mathrm{k} = \frac{1}{2} \cdot 80 \,\mathrm{kg} \cdot \left(18 \,\mathrm{m/s}\right)^2 = 12960\,{{\mathrm{kg}\cdot\mathrm{m}^2}\over{\mathrm{s}^2}} = 12960 \,\mathrm{J}$$
+
+]
+???
+F=ma
+
+V=at
+
+S = 1/2 vt = 1/2at^2
+---
+.left-column[
+  ## Механична енергия
+  ### - Кинетична
+  ### - Потенциална
+[<img src="./media/Tower_of_Pisa.jpg" alt="1 kg Silicon Sphere" width="100%">](./media/Tower_of_Pisa.jpg)
+]
+.right-column[
+# Потенциална енергия
+
+Тяло "издигнато" над земята има [потенциална енергия](https://en.wikipedia.org/wiki/Potential_energy):
+
+$$E_\mathrm{p} =mgh$$
+
+където `\(m\)` е масата му, `\(g=9.81\,\mathrm{m/s^2}\)` е земното ускорение а `\(h\)` е височината над "кота нула".
+
+Ако вземем примерът за кинетичната енергия то:
+
+$$E_\mathrm{p} = E_k$$
+
+$$mgh  = \tfrac{1}{2} mv^2$$
+
+$$h  = \tfrac{1}{2} \tfrac{v^2}{g}$$
+
+$$h  = \tfrac{1}{2} \tfrac{(18\,\mathrm{m/s})^2}{9.81\,\mathrm{m/s^2}} \approx 16.51\,\mathrm{m}$$
+]
+???
+Много видове потенциалнма енергия
+- в гравитацията на земята (видяхме)
+- на пружина
+- гравитационното привличане между две тела
+- химическа
+- електрическа
+  - електростатична
+  - магнитна
+- атомна
+
+$$h  = \tfrac{1}{2} \tfrac{mv^2}{mg} = \tfrac{1}{2} \tfrac{v^2}{9.81\,\mathrm{m/s^2}}$$
+
+S = 1/2 vt = 1/2at^2
+
+v = at
+
+t = v/a
+
+S = 1/2 v^2/a
+
+https://commons.wikimedia.org/wiki/File:Tower_of_Pisa.jpg
+---
+.left-column[
+  ## Защо за енергията?	
+  ## Какво е енергия?
+  ## Видове едергия
+]
+.right-column[
+]
+---
+.left-column[
+  ## Защо за енергията?	
+  ## Какво е енергия?
+  ## Видове едергия
+]
+.right-column[
+Защо е по-евтино да се отопляваме с климатик отколкото с печка?
+
+F=ma intertial mass
+F=G(m1m2/r2) gravitational mass
+Кулата в Пиза, перо, оловна топка, обща теория на относителносста
+Протони, неутрони, кварки, потенциална и кинетична енергия на кварките
+Хигс бозона - 2% от масата - кварки и електрони
+другото - енергия!
+https://www.youtube.com/watch?v=x8grN3zP8cg
+
+https://en.wikipedia.org/wiki/Composition_of_the_human_body
+
+F=k(q1q2/r2)
 ]
 ---
 template: inverse
@@ -764,7 +988,10 @@ Now I just have to try images and videos and the presentation is "done" :-D
 ---
 # Images
 
-.right[![Right-aligned image](https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg)]
+.right[![Right-aligned image](./media/Clock_accuracy.svg)
+
+https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg
+]
 ???
 Did we do images? I think we did.
 ---
@@ -779,7 +1006,7 @@ https://commons.wikimedia.org/wiki/File:Castle_Bravo_Blast.jpg
 ---
 class: middle, center
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7Z4JIQjQM" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+<irame width="560" height="315" src="https://www.youtube.com/embed/Bd7Z4JIQjQM" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
 
 ### Video example from YouTube
 ---
