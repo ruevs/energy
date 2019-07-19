@@ -27,6 +27,9 @@
       }
       li p { line-height: 1.25em; }
       .red { color: #fa0000; }
+      .white { color: #ffffff; }
+      .yellow { color: #ffff00; }
+
       .large { font-size: 2em; }
       a, a > code {
         color: rgb(249, 38, 114);
@@ -102,7 +105,10 @@
       }
 
       /* Two-column layout */
-      .left-column {
+        .left-column {
+          display: none;
+        }
+/*      .left-column {
         color: #777;
         width: 20%;
         height: 92%;
@@ -115,7 +121,7 @@
         width: 75%;
         float: right;
         padding-top: 1em;
-      }
+      }*/
       .right-float {
         float: right;
       }
@@ -161,14 +167,15 @@ layout: false
   ## Мерни единици
 ]
 .right-column[
+## Мерни единици
 Карате със `\(120\mathrm{mm}/\mathrm{s}\)` по магистралата за Пловдив между `\(2\mathrm{s}\)` и `\(3\mathrm{s}\)` след обед. Какво разстояние ще изминете?
 
 $$120{\mathrm{mm} \over \mathrm{s}}(3\mathrm{s}-2\mathrm{s})=120{\mathrm{mm} \over \mathrm{s}}1\mathrm{s}=120\mathrm{mm}$$
 
-.footnote[.right-float[<img src="./media/Dont_panic.svg" alt="HHGTTG" width="100">]
+.footnote[.right-float[<img src="./media/Dont_panic.svg" title="Bring a towel" alt="HHGTTG" width="100">]
 .red[*] Да, в тази лекция ще има много формули <br>
 ##😱😠😡😢😲😵😰<br>
-.right-float[<img src="./media/FuturamaDoNotPanic.png" alt="HHGTTG" width="100">]
+.right-float[<img src="./media/FuturamaDoNotPanic.png" alt="Futurama" width="100">]
 #.red[DON'T PANIC]]
 ]
 --
@@ -187,8 +194,8 @@ $${\mathrm{mm} \over \mathrm{s}}(\mathrm{s}-\mathrm{s})={\mathrm{mm} \over \math
   ## SI
 ]
 .right-column[
+.right-float[[<img src="./media/sidiagramcolor-1200_1.png" title="Готин часовник" alt="Nice clock" width="500">](./media/sidiagramcolor-1200_1.png)]
   # [SI](https://en.wikipedia.org/wiki/International_System_of_Units)
-  ### Международна система единици
   ### От френски "Système international (d'unités)"
   ## [Основни единици](https://www.bipm.org/en/publications/si-brochure/)
 
@@ -205,7 +212,9 @@ $${\mathrm{mm} \over \mathrm{s}}(\mathrm{s}-\mathrm{s})={\mathrm{mm} \over \math
 
 .footnote[.red[*] http://old.iupac.org/publications/books/author/mills.html <br> Quantities Units and Symbols in Physical Chemistry, IUPAC]
 ???
-Мерните единици пук ни помагат когато говорим конкретно количествено за различни "измеряеми" неща/величини
+### Международна система единици
+
+Мерните единици пък ни помагат когато говорим конкретно количествено за различни "измеряеми" неща/величини
 да "мерим с един и същи аршин".
 Традиционно те са станали изключително важни от краят на 15 век когато търговията е обхванала целият известен
 тогава свят.
@@ -232,17 +241,23 @@ The first letter of symbols for units derived from the name of a person is writt
 ]
 .right-column[
 ## Време (секунда, s)
-.right-float[[<img src="./media/Czech-2013-Prague-Astronomical_clock_face.jpg" alt="Nice clock" width="140">](./media/Czech-2013-Prague-Astronomical_clock_face.jpg)]
+.right-float[
+[<img src="./media/Czech-2013-Prague-Astronomical_clock_face.jpg" title="Готин часовник" alt="Nice clock" width="250">](./media/Czech-2013-Prague-Astronomical_clock_face.jpg)
+<br>
+[<img src="./media/Iridescent_Nightscape_over_La_Silla.jpg" alt="Night Sky" width="250">](./media/Iridescent_Nightscape_over_La_Silla.jpg)
+<br>
+[<img src="./media/Ytterbium_Lattice_Atomic_Clock_(10444764266).jpg" title="Точен часовник" alt="Atomic clock" width="250">](./media/Ytterbium_Lattice_Atomic_Clock_%2810444764266%29.jpg)
+]
 - __Стара__: 
 
 `\(^1/_{86400}\)` от ден от 24 часа по 60 минути по 60 секунди
 
-.right-float[[<img src="./media/Iridescent_Nightscape_over_La_Silla.jpg" alt="Night Sky" width="140">](./media/Iridescent_Nightscape_over_La_Silla.jpg)]
+.right-float[]
 - __Временна (1956)__:
 
 `\(1 \over 31556925.9747\)` от продължителността на тропическата 1990-а година януари 0 в 12 часа [ефемеридно време](https://en.wikipedia.org/wiki/Ephemeris_time).
 
-.right-float[[<img src="./media/Ytterbium_Lattice_Atomic_Clock_(10444764266).jpg" alt="Atomic clock" width="140">](./media/Ytterbium_Lattice_Atomic_Clock_%2810444764266%29.jpg)]
+.right-float[]
 - __Текуща (1967)__:
 
 Продължителносста на `\(9192631770\)` периода на електромагнитната радияция съответваща на прехода между двате нива на
@@ -441,7 +456,7 @@ https://commons.wikimedia.org/wiki/File:Royal_Promenade,_Explorer_of_the_Seas_01
 
 - __Временна (1967)__:
 
-.right-float[[<img src="./media/Silicon_sphere_for_Avogadro_project.jpg" alt="1 kg Silicon Sphere" width="200">](./media/Silicon_sphere_for_Avogadro_project.jpg)]
+.right-float[[<img src="./media/Silicon_sphere_for_Avogadro_project.jpg" title="Ако това беше земята неравностите щяха да са 14м" alt="1 kg Silicon Sphere" width="200">](./media/Silicon_sphere_for_Avogadro_project.jpg)]
 Количеството от дадено вещество (съединение), което съдържа толкова градивни частици колкото атома има в 0.012 kg въглерод-12.
 
 - __Текуща (2019)__:
@@ -469,16 +484,19 @@ template: inverse
 
 # Енергия!
 ---
+layout: false
 background-image: url(./media/IMG_8830.JPG)
 background-size: cover
 .left-column[
   ## Защо за енергията?	
 ]
 .right-column[
-### По едно време (2011г.) твърде много се говореше за енергията.
-### На последък пак...
 ]
 ???
+## Защо за енергията?	
+### По едно време (2011г.) твърде много се говореше за енергията.
+### На последък пак...
+
 Напоследък много се говори за енергия.
 -	Протести за ецените на електро енергията
 -	Референдум за атомната енергия
@@ -491,32 +509,35 @@ background-size: cover
 https://moanashirts.com/wp-content/uploads/2019/06/Retro-Vintage-3-6-Roentgen-Not-Great-Not-Terrible-Chernobyl-shirt-1.jpg
 --
 
-.pull-right[<img src="./media/image_5452e-Chernobyl-Disaster.jpg" alt="Chernobyl reactor 4" title="3.6 Roentgen, not great, not terrible" width="100%">]
+.pull-right[<img src="./media/image_5452e-Chernobyl-Disaster.jpg" title="Gimme fuel, gimme fire, gimme that which I desire, ooh! " alt="Chernobyl reactor 4" title="3.6 Roentgen, not great, not terrible" width="100%">]
 --
 
-.pull-left[<img src="./media/Retro-Vintage-3-6-Roentgen-Not-Great-Not-Terrible-Chernobyl-shirt-1.jpg" alt="Mall" width="100%"> <br> OK meme е но чак тениска?]
+.pull-left[<img src="./media/Retro-Vintage-3-6-Roentgen-Not-Great-Not-Terrible-Chernobyl-shirt-1.jpg" alt="3.6 Roentgen" width="100%"> <br> OK meme е но чак тениска?]
 ---
 background-image: url(./media/CrabNebula_PIA21474.jpg)
 background-size: cover
-.inverse[
-.left-column[
-  ## Защо за енергията?	
+.left-column.yellow[
+  ## Защо за енергията?
   ## Какво е енергия?
   ## &nbsp
 ]
 .right-column[
 .right-float[[<img src="./media/EinsteinTongue.jpg" alt="Albert Einstein Tongue" width="200">](https://culturacolectiva.com/history/albert-einstein-tongue-photo-true-story-behind)]
-# You matter unless you multiply yourself by `\(C^2\)` then you energy.
+
+.yellow[# You matter unless you multiply yourself by `\(C^2\)` then you energy.
 
 ### Това е вярно...
+]
 
-# $$E =m{\cdot}C^2$$
+# .red[$$E =m{\cdot}C^2$$]
 
-.footnote[.red[*] [NASA JPL Crab Nebula from Five Observatories](https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474)]
+.footnote[.red[*] [NASA JPL Crab Nebula from Five Observatories](https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474) ]
 ]
 ]
 ???
-Всичко около нас е или енергия или марютерия. Друго няма (според физиците).
+## Какво е енергия?
+
+Всичко около нас е или енергия или материя. Друго няма (според физиците).
 Шегичка за духа?
 
 Но за тази крилата формула по-късно...
@@ -541,7 +562,6 @@ https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474
   ## Какво е енергия?
 ]
 .right-column[
-## Да видим какво пише в учебника по физика?
 >[...в днешните учебни програми по физика отсъства
 >по-общо определение за величината енергия. В 8. клас се дават определения за
 >кинетична енергия, за потенциална енергия, за механична енергия, за вътрешна
@@ -554,7 +574,9 @@ https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474
 Хммм...
 ]
 ???
-Тръгваш да търсиш из интернет в учебниците по физика дефиниция за енергията - няма свеста.
+## Да видим какво пише в учебника по физика?
+
+Тръгваш да търсиш из интернет в учебниците по физика дефиниция за енергията - няма свестна.
 Питаш тъщата - учител по физика в гимазията - няма. Проблем...
 
 Енергията (на гръцки: ἐνέργεια — активност, работа) е скаларна физична величина, която характеризира способността на дадена система да променя състоянието на заобикалящата я среда или да извършва работа. Често се среща опростената дефиниция, че енергията на дадена система е способността ѝ да върши работа. Тази опростена дефиниция е удобна в класическата механика. 
@@ -566,12 +588,19 @@ https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA21474
 http://phys.uni-sofia.bg/~cpopov/Almanah-pdf/I%20chast/1%20metodika/05%20zashto%20minus.pdf
 ---
 .left-column[
-  ## Защо за енергията?	
+  ## Защо за енергията?
   ## Какво е енергия?
+
+.right-float[
+<img src="./media/asterix-and-obelix.jpg" title="Magic potion energy" alt="Magic potion energy" width="400"><br>
+]
+
   ## Видове енергия
 ]
 --
+
 .right-column[
+
 - Механична енергия
   - Кинетична енергия
   - Потенциална енергия
@@ -608,9 +637,11 @@ template: inverse
 .left-column[
   ## Механична енергия
   ### - Кинетична
-[<img src="./media/Tower_of_Pisa.jpg" alt="1 kg Silicon Sphere" width="100%">](./media/Tower_of_Pisa.jpg)
 ]
 .right-column[
+
+.right-float[[<img src="./media/Tower_of_Pisa.jpg" alt="Tower of pisa" width="200">](./media/Tower_of_Pisa.jpg)]
+
 # [Кинетична енергия](https://en.wikipedia.org/wiki/Kinetic_energy)
 
 $$E_\mathrm{k} =\tfrac{1}{2} mv^2$$
@@ -622,6 +653,9 @@ $$E_\mathrm{k} =\tfrac{1}{2} mv^2$$
 $$E_\mathrm{k} = \frac{1}{2} \cdot 80 \,\mathrm{kg} \cdot \left(18 \,\mathrm{m/s}\right)^2 = 12960\,{{\mathrm{kg}\cdot\mathrm{m}^2}\over{\mathrm{s}^2}} = 12960 \,\mathrm{J}$$
 ]
 ???
+## Механична енергия
+### - Кинетична
+
 [Кинетичната енергия](https://en.wikipedia.org/wiki/Kinetic_energy) на тяло с маса `\(m\)` движещо се със скорост `\(v\)` е:
 
 Например ако тяло с маса 80&nbsp;kg се движи със скорост 18&nbsp;m/s (64.8&nbsp;km/h) то енергияа му е:
@@ -636,10 +670,12 @@ S = 1/2 vt = 1/2at^2
   ## Механична енергия
   ### - Кинетична
   ### - Потенциална
-[<img src="./media/Tower_of_Pisa.jpg" alt="1 kg Silicon Sphere" width="100%">](./media/Tower_of_Pisa.jpg)
 ]
 .right-column[
-# Потенциална енергия
+
+.right-float[[<img src="./media/Tower_of_Pisa.jpg" alt="Tower of pisa" width="200">](./media/Tower_of_Pisa.jpg)]
+
+# [Потенциална енергия](https://en.wikipedia.org/wiki/Potential_energy)
 
 $$E_\mathrm{p} =mgh$$
 
@@ -657,6 +693,8 @@ $$h  = \tfrac{1}{2} \tfrac{v^2}{g}$$
 $$h  = \tfrac{1}{2} \tfrac{(18\,\mathrm{m/s})^2}{9.81\,\mathrm{m/s^2}} \approx 16.51\,\mathrm{m}$$
 ]
 ???
+## Механична енергия
+### - Потенциална
 Тяло "издигнато" над земята има [потенциална енергия](https://en.wikipedia.org/wiki/Potential_energy):
 
 Ако вземем примерът за кинетичната енергия то:
@@ -697,6 +735,8 @@ https://commons.wikimedia.org/wiki/File:Tower_of_Pisa.jpg
   ## Видове едергия
 ]
 .right-column[
+Храната!
+
 Защо е по-евтино да се отопляваме с климатик отколкото с печка?
 
 F=ma intertial mass
@@ -708,6 +748,9 @@ F=G(m1m2/r2) gravitational mass
 https://www.youtube.com/watch?v=x8grN3zP8cg
 
 https://en.wikipedia.org/wiki/Composition_of_the_human_body
+
+https://xkcd.com/1162/
+(https://imgs.xkcd.com/comics/log_scale.png)
 
 F=k(q1q2/r2)
 
@@ -1042,6 +1085,8 @@ class: middle, center
     </textarea>
     <script src="engine/remark-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+<!--    <script src="engine/MathJax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+-->
     <script>
       var hljs = remark.highlighter.engine;
     </script>
@@ -1050,7 +1095,7 @@ class: middle, center
       var slideshow = remark.create({
           highlightStyle: 'monokai',
           highlightLanguage: 'remark',
-//          ratio: '16:9',
+          ratio: '16:9',
           highlightLines: true
         }) ;
 
