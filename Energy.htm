@@ -28,7 +28,16 @@
       li p { line-height: 1.25em; }
       .red { color: #fa0000; }
       .white { color: #ffffff; }
-      .yellow { color: #ffff00; }
+      .black { color: #000000; }
+      .yellow { color: #ffff00;}
+      .blue{ color: #0000ff; }
+      .mixblend{
+        mix-blend-mode: difference;
+        isolation: isolate;
+      }
+      .blackshadow{
+        text-shadow: #000 3px 3px 2px;
+      }
 
       .large { font-size: 2em; }
       a, a > code {
@@ -941,6 +950,60 @@ $$0.2 \cdot 16800 / 3600000 = 0.0009(3) лв. = 0.09(3) ст.$$
 $$0.2 \cdot 8400000 / 3600000 = 0.4(6) лв./ден$$
 
 ---
+class: inverse
+background-image: url(./media/RammsteinBenzinLasVegas.jpg)
+background-size: contain
+
+.pull-right[[<img src="./media/Octane_3D_ball.png" alt="Octane" width="100%">](https://www.youtube.com/watch?v=z0wK6s-6cbo)]
+#.yellow.blackshadow[Бензин! 46.7 MJ/kg 0.755 kg/L ]
+<br>
+
+.footnote.yellow.blackshadow[
+###$$\ce{2 C8H18 + 25 O2 -> 16 CO2 + 18H2O}$$
+
+###$$\ce{C8H18}\,114\,\mathrm{g/mol}$$
+###$$\ce{O2}\,32\,\mathrm{g/mol}$$
+###$$\ce{CO2}\,44\,\mathrm{g/mol}$$
+###$$\ce{H2O}\,18\,\mathrm{g/mol}$$
+
+]
+???
+За 16800J ще ни трябва 16800J/46.7 MJ/kg = 0.3597g / 0.755 g/mL = 0.4754966887417219 mL
+
+Да ядем бензин?
+8.4 MJ/ден / 46.7 MJ/kg = 0.180 kg/ден / 0.755 kg/L = 0.238 L/ден
+
+Gasoline blends differ, and therefore actual energy content varies according to the season and producer by up to 1.75% more or less than the average
+
+Molecular weights of the representative octane combustion are C8H18 114, O2 32, CO2 44, H2O 18; therefore 1 kg of fuel reacts with 3.51 kg of oxygen to produce 3.09 kg of carbon dioxide and 1.42 kg of water.
+
+$$2\,C_8H_{18} + 25\,O_2 -> 16\,CO_2 + 18\,H_2O$$
+
+https://en.wikipedia.org/wiki/Gasoline#Energy_content
+
+https://mhchem.github.io/MathJax-mhchem/ 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/isolation
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+--
+
+.pull-right.footote.yellow.blackshadow[
+###$${16.8\,\mathrm{kJ} \over 46.7\,\mathrm{kJ/g}} \approx 0.36\,\mathrm{g}\,{0.36\,\mathrm{g} \over 0.755\,\mathrm{g/mL}} \approx 0.5\,\mathrm{mL}$$
+
+###$$0.5\,\mathrm{mL} \cdot 2.5\,\text{лв./L} = 0.125\,\text{ст.}$$
+
+Да ядем бензин?
+
+###$${8.4\,\text{MJ/ден} \over 46.7\,\mathrm{MJ/kg}} \approx 0.18\,\text{kg/ден}$$
+
+###$${0.18\,\text{kg/ден} \over 0.755\,\mathrm{kg/L}} \approx 0.238\,\text{L/ден}$$
+
+###$$0.238\,\text{L/ден} \cdot 2.5\,\text{лв./L} \approx 0.596\,\text{лв./ден} = 60\,\text{ст./ден}$$
+]
+---
 .left-column[
   ## Защо за енергията?	
   ## Какво е енергия?
@@ -1047,10 +1110,15 @@ class: middle, center
           highlightLines: true
         }) ;
 
+      MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+
       // Setup MathJax
       MathJax.Hub.Config({
           tex2jax: {
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          },
+          TeX: {
+            extensions: ["[mhchem]/mhchem.js"]
           }
       });
 
