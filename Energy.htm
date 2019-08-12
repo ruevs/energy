@@ -159,6 +159,38 @@
         background: url("./media/Tower_of_Pisa.jpg");
         background-size: contain
       }
+      
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
     </style>
   </head>
   <body>
@@ -738,7 +770,7 @@ background-size: cover
 #Електромагнитна енергия
 .right-float[[<img src="./media/EM_Spectrum_Properties_edit.svg" alt="Electromagnetic spectrum" width="800">](./media/EM_Spectrum_Properties_edit.svg)]
 
-###$$E = hν$$
+#$$E = hν$$
 ???
 Електромагнитно поле -> Фотон (квантова теория на полето), движи се със скоростта на светлината във вакуум, няма маса в покой.
 "чиста" (но не зелена освен ако не е 550nm) енергия ;-)
@@ -811,7 +843,10 @@ background-size: contain
 
 Обратно на климатика... топлини машини, КПД (печка 100%, кола 20%, 35% модерен бензин с директно впръскване, до 45% дизел)... топлинни помпи.
 ---
-[<img src="./media/BGElectricityProfile.png" alt="BG Electricity production" width="100%">](http://www.eso.bg/?did=124)
+background-image: url(./media/BGElectricityProfile.png)
+background-size: contain
+
+.footnote[[http://www.eso.bg/?did=124](http://www.eso.bg/?did=124)]
 ???
 Колко енергия харчи българия на година?
 
@@ -930,22 +965,85 @@ https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.s
 Протони, неутрони, кварки, глуони, потенциална (Binding energy) и кинетична енергия на кварките
 
 https://www.youtube.com/watch?v=x8grN3zP8cg
+
 ---
 class: inverse
-background-image: url(./media/blackhole_photo.jpg)
+#250 000 000 000 J 	
+#Храна на човек за 80 години
+---
+class: inverse
+#180 000 000 000 000 J
+#Енергията на 2 грама маса
+---
+class: inverse
+#210 000 000 000 000 000 J
+#Цар бомба (водородна бомба 50 MT)
+---
+class: inverse
+#500 000 000 000 000 000 000 J
+#Енергия използвана от човечеството за 2010г.
+---
+class: inverse
+#380 000 000 000 000 000 000 000 000
+# Енергия излъчвана от слънцето за една секунда.
+---
+class: inverse
+#120 000 000 000 000 000 000 000 000 000 000 000 000 000 000 J
+#Слънцето за целият му живот
+#Супернова
+???
+https://solarsystem.nasa.gov/resources/822/cassiopeia-a-supernova-remnant/
+---
+class: inverse
+#180 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 J
+#Цялата маса на слънцето превърната в енергия
+---
+class: inverse
+#860 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 J
+#Енергия излъчена при сливане на черни дупки (GW170729) (всяка по 42 слънчеви маси)
+---
+<video loop muted autoplay class="fullscreen-bg__video">
+        <source src="./media/BBH_gravitational_lensing_of_gw150914.webm" type="video/webm">
+</video>
+
+
+---
+class: inverse
+background-image: url(./media/DarthVader.jpg)
 background-size: contain
 
-Обратно на E=mC2, анихилация, антиматерия.
+---
+class: inverse
+background-image: url(./media/DarthVader2.jpg)
+background-size: contain
 
-This energy, however, can be released only by the processes of nuclear fission (0.1%), nuclear fusion (1%), or the annihilation of some or all of the matter in the volume V by matter-antimatter collisions (100%).
+https://en.wikipedia.org/wiki/Dark_energy
+// If you only knew the power of the dark side Vader
 
-To have a Hawking temperature larger than 2.7 K (and be able to evaporate), a black hole would need a mass less than the Moon. Such a black hole would have a diameter of less than a tenth of a millimeter.[130]
+Dark energy - Assuming that the standard model of cosmology is correct, the best current measurements indicate that dark energy contributes 68% of the total energy in the present-day observable universe.
+The mass–energy of dark matter and ordinary (baryonic) matter contribute 27% and 5%, respectively, and other components such as neutrinos and photons contribute a very small amount.
+The density of dark energy is very low (~ 7 × 10−30 g/cm3)
+???
+https://wallpaperplay.com/board/darth-vader-wallpapers
 
-A black hole of one solar mass (M☉) has a temperature of only 60 nanokelvins (60 billionths of a kelvin); in fact, such a black hole would absorb far more cosmic microwave background radiation than it emits. A black hole of 4.5×1022 kg (about the mass of the Moon, or about 133 μm across) would be in equilibrium at 2.7 K, absorbing as much radiation as it emits. Yet smaller primordial black holes would emit more than they absorb and thereby lose mass.[9]
+---
+.right-float[[<img src="./media/Dark_Energy.jpg" title="If you only knew the power of the dark side" alt="Universe expansion" width="600">](https://en.wikipedia.org/wiki/Dark_energy)]
 
-https://en.wikipedia.org/wiki/Yakov_Zeldovich
-https://en.wikipedia.org/wiki/Black_hole
-https://en.wikipedia.org/wiki/Hawking_radiation
+От големият взрив до термалната смърт на вселената.
+
+it is projected that most galaxies will eventually cross a type of cosmological event horizon where any light they emit past that point will never be able to reach us at any time in the infinite future[82] because the light never reaches a point where its "peculiar velocity" toward us exceeds the expansion velocity away from us (these two notions of velocity are also discussed in Uses of the proper distance). 
+
+Assuming the dark energy is constant (a cosmological constant), the current distance to this cosmological event horizon is about 16 billion light years, meaning that a signal from an event happening at present would eventually be able to reach us in the future if the event were less than 16 billion light years away, but the signal would never reach us if the event were more than 16 billion light years away.[81]
+
+???
+https://www.youtube.com/watch?v=kfffy12uQ7g		// The Misunderstood Nature of Entropy
+
+https://en.wikipedia.org/wiki/Comoving_and_proper_distances#Uses_of_the_proper_distance
+
+https://upload.wikimedia.org/wikipedia/commons/c/ce/Dark_Energy.jpg
+---
+class: inverse
+
 
 ---
 
@@ -984,38 +1082,29 @@ https://en.wikipedia.org/wiki/List_of_gravitational_wave_observations
 
 ---
 class: inverse
-background-image: url(./media/DarthVader.jpg)
+background-image: url(./media/blackhole_photo.jpg)
 background-size: contain
 
----
-class: inverse
-background-image: url(./media/DarthVader2.jpg)
-background-size: contain
+Обратно на E=mC2, анихилация, антиматерия.
 
-https://en.wikipedia.org/wiki/Dark_energy
-// If you only knew the power of the dark side Vader
+This energy, however, can be released only by the processes of nuclear fission (0.1%), nuclear fusion (1%), or the annihilation of some or all of the matter in the volume V by matter-antimatter collisions (100%).
 
-Dark energy - Assuming that the standard model of cosmology is correct, the best current measurements indicate that dark energy contributes 68% of the total energy in the present-day observable universe.
-The mass–energy of dark matter and ordinary (baryonic) matter contribute 27% and 5%, respectively, and other components such as neutrinos and photons contribute a very small amount.
-The density of dark energy is very low (~ 7 × 10−30 g/cm3)
-???
-https://wallpaperplay.com/board/darth-vader-wallpapers
+To have a Hawking temperature larger than 2.7 K (and be able to evaporate), a black hole would need a mass less than the Moon. Such a black hole would have a diameter of less than a tenth of a millimeter.[130]
 
----
-.right-float[[<img src="./media/Dark_Energy.jpg" title="If you only knew the power of the dark side" alt="Universe expansion" width="600">](https://en.wikipedia.org/wiki/Dark_energy)]
+A black hole of one solar mass (M☉) has a temperature of only 60 nanokelvins (60 billionths of a kelvin); in fact, such a black hole would absorb far more cosmic microwave background radiation than it emits. A black hole of 4.5×1022 kg (about the mass of the Moon, or about 133 μm across) would be in equilibrium at 2.7 K, absorbing as much radiation as it emits. Yet smaller primordial black holes would emit more than they absorb and thereby lose mass.[9]
 
-От големият взрив до термалната смърт на вселената.
+|Power [W]|Evaporation time [yr]|Mass [kg]|Temp [K]| Schwarzschild radius [m]|Example|
+|-|-|-|-|-|-|
+|1.00E+14|1.80E+04|1.89E+09|6.50E+13|2.80E-18|100TW|
+|9.90E+12|5.77E+05|6.00E+09|2.05E+13|8.91E-18|Pyramid of Giza|
+|9.99E-18|5.69E+50|5.97E+24|2.05E-02|8.87E-03|Earth|
+|2.47E-10|4.61E+39|1.20E+21|1.02E+02|1.78E-06|Earth Oceans|
 
-it is projected that most galaxies will eventually cross a type of cosmological event horizon where any light they emit past that point will never be able to reach us at any time in the infinite future[82] because the light never reaches a point where its "peculiar velocity" toward us exceeds the expansion velocity away from us (these two notions of velocity are also discussed in Uses of the proper distance). 
+$$ r_s = \frac{2 G M}{c^2} $$
 
-Assuming the dark energy is constant (a cosmological constant), the current distance to this cosmological event horizon is about 16 billion light years, meaning that a signal from an event happening at present would eventually be able to reach us in the future if the event were less than 16 billion light years away, but the signal would never reach us if the event were more than 16 billion light years away.[81]
-
-???
-https://www.youtube.com/watch?v=kfffy12uQ7g		// The Misunderstood Nature of Entropy
-
-https://en.wikipedia.org/wiki/Comoving_and_proper_distances#Uses_of_the_proper_distance
-
-https://upload.wikimedia.org/wikipedia/commons/c/ce/Dark_Energy.jpg
+https://en.wikipedia.org/wiki/Yakov_Zeldovich
+https://en.wikipedia.org/wiki/Black_hole
+https://en.wikipedia.org/wiki/Hawking_radiation
 
 ---
 .left-column[
