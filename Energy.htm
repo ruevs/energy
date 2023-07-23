@@ -1289,7 +1289,15 @@ class: middle, center
           },
           TeX: {
             extensions: ["[mhchem]/mhchem.js"]
-          }
+          },
+          MathZoom: {
+            styles: {
+              "#MathJax_Zoom": {
+                "background-color": "rgba(0,0,0,0.7)", //"#0000F0"
+				"color": "yellow"
+              }
+            }
+		  }
       });
 
       MathJax.Hub.Configured();
